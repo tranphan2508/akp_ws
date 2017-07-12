@@ -1,66 +1,57 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-	<head>
-		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type');?>" charset="<?php bloginfo('charset');?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">	
-		<link rel="SHORTCUT ICON" href="<?php bloginfo('stylesheet_directory')?>/images/favicon.png">
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>" type="text/css"/>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/home.css" type="text/css"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/bootstrap.min.js"></script>
-		<title><?php bloginfo('name')?></title>
-		</head>
-	<body>
-	<?php $curlang = pll_current_language();
-	$curlang_link = $curlang=='en'?'':('-'.$curlang);
-	//global $tel = "+84.0236.3888773";
-	?>
-	<!--header-->
-	<div class="header">
-		<nav class="navbar navbar-default content-menu">
-			
-			<div class="navbar-main-content container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					
-					<a href="/home<?php echo $curlang_link?>/"><img class="img-responsive" alt="????????" src="<?php bloginfo('stylesheet_directory')?>/images/saver_logo.png"></a>	
-				</div>
-				<div class="navbar-collapse collapse" id="menu">
-					<?php
-						
-						wp_nav_menu( array(
-							'theme_location' => 'top',
-							'depth' => 2,
-							'container' => false,
-							'menu_class' => 'nav navbar-nav header-menu',
-							'fallback_cb' => 'wp_page_menu',
-							'walker' => new wp_bootstrap_navwalker()
-						)); 
-					?>
-				</div>	
-				<div class="container multi-language"> 
-					<div style="line-height: 1em; float: right; padding-left: 20px" class="phone glyphicon glyphicon-earphone"><span><a href="tel:+84.0236.3888773">+84.0236.3888773</a></span></div>
-					<div class="language-controls">
-					<ul class="language_swicher">
-					<?php
-						pll_the_languages(array('show_flags' => 1,
-												 'show_names' => 0,
-												 'hide_current'=>0,
-												 'raw' =>0));
-					?>
-					</ul>
-					</div>
-				</div>
-				
-			</div>
-		</nav>
-		
-		<div class="divider_header"></div>
-	</div><!--End .header-->
+<html <?php language_attributes(); ?> />
+
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmgp.org/xfn/11" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class();?> >
+<div class="header">
+    <div class="header-inner">
+        <div class="logo">
+            <a href="<?php echo esc_url( home_url('/') ); ?>">
+                <h1><span>A</span>NH KIET PHAT</h1>
+                <span class = "tagline">Nhà thầu của mọi công trình</span>
+                </a>
+        </div> <!-- logo -->
+        <?php if ( ! dynamic_sidebar('sidebar-header')): ?>
+
+            <div class="column-1">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.jpg" alt="" />
+                <?php if( '' !== get_theme_mod('head_number')){ ?>
+                    <span class="headerphone"><?php echo esc_attr( get_theme_mod('head_number', '0789 256 321', 'skt-construction' )); ?></span><br>
+                <?php } ?>
+                <?php if( '' !== get_theme_mod('head_email')){ ?>
+                    <span class="headreemail"><a href="mailto:<?php echo sanitize_email(get_theme_mod('head_email','info@buildpress.com')); ?>"><?php echo esc_attr(get_theme_mod('head_email','info@buildpress.com')); ?></a></span>
+                <?php } ?>
+                <div class="clear"></div>
+            </div>
+
+            <div class="column-2">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-home.jpg" alt="" />
+                <?php if( '' !== get_theme_mod('head_address')){ ?>
+                    <span class="headerphone"><?php echo esc_attr( get_theme_mod('head_address', 'Street 238, Perth,', 'skt-construction' )); ?></span><br>
+                <?php } ?>
+                <?php if( '' !== get_theme_mod('head_citycountry')){ ?>
+                    <span class="headreemail"><?php echo esc_attr( get_theme_mod('head_citycountry', 'Western Australia', 'skt-construction' )); ?></span>
+                <?php } ?>
+                <div class="clear"></div>
+            </div>
+        <?php endif; ?>
+        <div class="column-3">
+            <?php if ( '' !== get_theme_mod( 'fb_link' ) ) { ?>
+                <a title="facebook" class="fb" target="_blank" href="<?php echo esc_url(get_theme_mod('fb_link','http://www.facebook.com')); ?>"></a>
+            <?php } ?>
+            <?php if ( '' !== get_theme_mod('gplus_link') ) { ?>
+                <a title="google-plus" class="gp" target="_blank" href="<?php echo esc_url(get_theme_mod('gplus_link','http://plus.google.com')); ?>"></a>
+            <?php }?>
+            <?php if ( '' !== get_theme_mod('linked_link') ) { ?>
+                <a title="linkedin" class="in" target="_blank" href="<?php echo esc_url(get_theme_mod('linked_link','http://www.linkedin.com')); ?>"></a>
+            <?php } ?>
+        </div>
+    </div><!-- .headerright -->
+    </div>
+</div>
