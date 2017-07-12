@@ -26,10 +26,10 @@ if (!isset($content_width)) {
 /**
  * Khai bao chuc nang cua theme
  */
-if (!function_exists('anhkietphat_theme_setup')) {
+if (!function_exists('theme_setup')) {
 
 
-    function anhkietphat_theme_setup()
+    function theme_setup()
     {
         /* Thiet lap textdomain */
         $language_folder = THEME_URL . '/languages';
@@ -72,7 +72,7 @@ if (!function_exists('anhkietphat_theme_setup')) {
 
     }
 
-    add_action('init', 'anhkietphat_theme_setup');
+    add_action('init', 'theme_setup');
 
 }
 
@@ -97,3 +97,24 @@ if (!function_exists('site_name_header')) {
     }
 }
 
+/*
+ * Load theme style
+ */
+if(!function_exists('theme_styles')){
+    function theme_styles(){
+        wp_enqueue_style('bootstrap_css', THEME_URL.'/css/bootstrap.css');
+        wp_enqueue_style('responsive_css', THEME_URL.'/css/responsive.css');
+
+    }
+    add_action( 'wp_enqueue_scripts', 'theme_styles' );
+}
+
+/*
+ * Load theme scripts
+ */
+if(!function_exists('theme_js')){
+    function theme_js(){
+        wp_enqueue_script( 'bootstrap_js', THEME_URL.'/js/bootstrap.min.js');
+    }
+    add_action( 'wp_enqueue_scripts', 'theme_js');
+}
