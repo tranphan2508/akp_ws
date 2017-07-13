@@ -26,10 +26,10 @@ if (!isset($content_width)) {
 /**
  * Khai bao chuc nang cua theme
  */
-if (!function_exists('anhkietphat_theme_setup')) {
+if (!function_exists('theme_setup')) {
 
 
-    function anhkietphat_theme_setup()
+    function theme_setup()
     {
         /* Thiet lap textdomain */
         $language_folder = THEME_URL . '/languages';
@@ -72,7 +72,7 @@ if (!function_exists('anhkietphat_theme_setup')) {
 
     }
 
-    add_action('init', 'anhkietphat_theme_setup');
+    add_action('init', 'theme_setup');
 
 }
 
@@ -97,3 +97,46 @@ if (!function_exists('site_name_header')) {
     }
 }
 
+/*
+ * load theme css
+ */
+if (!function_exists('theme_scripts')) {
+    function theme_scripts()
+    {
+        wp_enqueue_style('responsive', THEME_URL . "/css/responsive.css");
+        wp_enqueue_style('responsive', THEME_URL . "/css/bootstrap.min.css");
+        wp_enqueue_script( 'custom_js', THEME_URL . '/js/jquery.min.js' );
+        wp_enqueue_script( 'custom_js', THEME_URL . '/js/bootstrap.min.js' );
+        wp_enqueue_script( 'custom_js', THEME_URL . '/js/custom.js' );
+    }
+
+    add_action('wp_enqueue_scripts', 'theme_scripts');
+}
+wp_enqueue_style('style', get_stylesheet_uri());
+
+/*
+ * pagination
+ */
+if (!function_exists('pagination')) {
+    function pagination()
+    {
+        global $wp_query;
+        $big = 12345678;
+        $page_format = paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $wp_query->max_num_pages,
+            'type'  => 'array'
+        ) );
+        if( is_array($page_format) ) {
+            $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+            echo '<div class="pagination"><div><ul>';
+            echo '<li><span>'. $paged . ' of ' . $wp_query->max_num_pages .'</span></li>';
+            foreach ( $page_format as $page ) {
+                echo "<li>$page</li>";
+            }
+            echo '</ul></div></div>';
+        }
+    }
+}
