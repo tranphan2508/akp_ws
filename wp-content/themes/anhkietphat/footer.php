@@ -1,8 +1,5 @@
-<div id="footer">
-    <div class="copyright">
-    </div>
+<div class="footer">
+    footer
 </div>
-</div><!-- container -->
-<?php wp_footer();
-?>
 </body>
+</html>
