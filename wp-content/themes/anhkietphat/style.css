@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     color: #5d5c5c;
-    font: normal 13px/20px 'Arimo', sans-serif;
+    font: normal 12px/20px 'Arimo', sans-serif;
     position: relative;
 }
 
@@ -177,7 +177,7 @@ ol.comment-list li {
 
 .header .header-inner .logo {
     z-index: 999;
-    padding: 25px 0 0;
+    padding: 20px 0 0;
     float: left;
 }
 
@@ -190,29 +190,39 @@ ol.comment-list li {
 }
 .header .header-inner a {}
 .header .header-inner .logo h1 {
-    font-weight: 600;
+    font-weight: 500;
     margin: 0px;
-    line-height: 36px;
-    font-family: 'Roboto', cursive;
-    color: rgb(5,107,179);
-    text-transform: uppercase;
+    line-height: 56px;
+    font-family: "Open Sans",Arial,sans-serif;
+    color: #096cb0;
+    font-size: 36px;
+    /*text-transform: uppercase;*/
+}
+.header .logo span.uppercase{
+    font-size: 57px;
+    font-weight: 500;
 }
 
 .header span.tagline {
-    color: #333;
+    color: #a7740a;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
 }
 
 .container {
     width: 1100px;
-    margin: 0 auto;
+    margin: 6px auto 0;
     position: relative;
+    min-height: 600px;;
+
 }
 
 .headerright {
     float: right;
     width: 50%;
     font-family: 'Roboto', cursive;
-    padding: 32px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 .headerright .column-1, .headerright .column-2, .headerright .column-3 {
@@ -257,11 +267,11 @@ ol.comment-list li {
 
 .headerright img {
     float: left;
-    margin: 5px 8px 0 0;
+    margin: 1px 8px 0 0;
 }
 
 .headerright .headerphone {
-    font: bold 16px 'Roboto';
+    font: bold 14px 'Roboto';
 }
 
 .headerright .headeremail {
@@ -326,8 +336,9 @@ ol.comment-list li {
     position: relative;
     z-index: 999;
     text-transform: uppercase;
-    border-bottom: 4px solid #ccc;
-    top: 30px;
+    /*border-bottom: 4px solid #ccc;*/
+    top: 15px;
+    float: right;
 }
 
 .header .header-inner .nav ul {
@@ -340,14 +351,10 @@ ol.comment-list li {
     margin: 0;
     position: relative;
     text-align: center;
-    width: 17%;
-}
-.header .header-inner .nav ul li:last-child {
-    width: 13%;
 }
 
 .header .header-inner .nav ul li a {
-    padding: 15px 30px;
+    padding: 10px 25px;
     display: block;
     /*color: #fff;*/
     /*border-right: 1px solid #363636;*/
@@ -381,7 +388,7 @@ ol.comment-list li {
     color: rgb(5,107,179);
 }
 .header .header-inner .nav ul li.current_page_item a {
-    border-bottom: 3px solid rgb(5,107,179);
+    border-bottom: 2px solid #a7740a;
 }
 
 .header .header-inner .nav ul li a:hover, .header .header-inner .nav ul li.current_page_item a {
@@ -420,7 +427,7 @@ ol.comment-list li {
 }
 
 .toggle a {
-    display: none;
+   /* display: none;*/
 }
 
 /* = header top sign in  css

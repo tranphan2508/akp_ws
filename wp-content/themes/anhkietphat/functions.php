@@ -104,9 +104,9 @@ if (!function_exists('theme_scripts')) {
     function theme_scripts()
     {
         wp_enqueue_style('responsive', THEME_URL . "/css/responsive.css");
-        wp_enqueue_style('responsive', THEME_URL . "/css/bootstrap.min.css");
-        wp_enqueue_script( 'custom_js', THEME_URL . '/js/jquery.min.js' );
-        wp_enqueue_script( 'custom_js', THEME_URL . '/js/bootstrap.min.js' );
+        wp_enqueue_style('bootstrap', THEME_URL . "/css/bootstrap.min.css");
+        wp_enqueue_script( 'jquery_js', THEME_URL . '/js/jquery.min.js' );
+        wp_enqueue_script( 'bootstrap_js', THEME_URL . '/js/bootstrap.min.js' );
         wp_enqueue_script( 'custom_js', THEME_URL . '/js/custom.js' );
     }
 
