@@ -1,0 +1,21 @@
+.main-title-bar-sub-menu-2 {
+	float: right;
+	margin-top: 15px!important;
+}
+.recruitment .mt0{
+	margin-top: 0px;
+}
+.recruitment .mt10,
+.benefits .mt10{
+	margin-top: 10px;
+}
+.recruitment .mb20,
+.training_process .mb20{
+	margin-bottom: 20px;
+}
+.training_process .mt20{
+	margin-top: 20px;
+}
+.recruitment ul{
+	margin-left: 24px;
+}
