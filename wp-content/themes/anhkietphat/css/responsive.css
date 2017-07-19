@@ -9,7 +9,7 @@
     }
 
     .container {
-        width: auto;
+        width: auto !important;
         padding: 0 20px;
     }
 
@@ -245,6 +245,9 @@
     .header .header-inner .nav ul li:hover ul li:hover ul, .header .header-inner .nav ul li:hover ul li:hover ul li:hover ul {
         left: 0 !important;
     }
+    .google-map{
+        height: 300px;
+    }
 }
 
 /* Mobile Landscape View */
@@ -272,6 +275,10 @@
     .toggle{
         display: none;
     }
+    .google-map{
+        height: 400px;
+    }
+
 }
 /* Tablet View */
 @media screen and (max-width: 1169px) and (min-width: 769px) {
@@ -290,7 +297,7 @@
     }
 
     .container {
-        width: auto;
+        width: auto !important;
         padding: 0 20px;
     }
 

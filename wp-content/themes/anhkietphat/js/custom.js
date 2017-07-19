@@ -1,4 +1,4 @@
-jQuery(window).load(function() {
+/*jQuery(window).load(function() {
 		if(jQuery('#slider') > 0) {
         jQuery('.nivoSlider').nivoSlider({
         	effect:'fade',
@@ -8,7 +8,7 @@ jQuery(window).load(function() {
         	effect:'fade',
     });
 		}
-});
+});*/
 	
 
 // NAVIGATION CALLBACK
@@ -23,39 +23,39 @@ jQuery(document).ready(function() {
 		jQuery(this).toggleClass("active");
 		jQuery(".nav").slideToggle('fast');
 	});
-	adjustMenu();
+	//adjustMenu();
 })
 
 //CSS Animation
-jQuery(window).scroll(function() {
-	jQuery('.pagewrap1').each(function(){
-		var imagePos = jQuery(this).offset().top;
+jQuery(window).scroll(function () {
+    jQuery('.pagewrap1').each(function () {
+        var imagePos = jQuery(this).offset().top;
 
-		var topOfWindow = jQuery(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
-				jQuery(this).addClass("fadeInUp");
-			}
-		});
-	
-	jQuery('.pagewrap2').each(function(){
-		var imagePos = jQuery(this).offset().top;
+        var topOfWindow = jQuery(window).scrollTop();
+        if (imagePos < topOfWindow + 400) {
+            jQuery(this).addClass("fadeInUp");
+        }
+    });
 
-		var topOfWindow = jQuery(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
-				jQuery(this).addClass("fadeInLeft");
-			}
-		});
-	 
-	 jQuery('.postwrap3').each(function(){
-		var imagePos = jQuery(this).offset().top;
+    jQuery('.pagewrap2').each(function () {
+        var imagePos = jQuery(this).offset().top;
 
-		var topOfWindow = jQuery(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
-				jQuery(this).addClass("fadeInRight");
-			}
-		});	
-		
-		
+        var topOfWindow = jQuery(window).scrollTop();
+        if (imagePos < topOfWindow + 400) {
+            jQuery(this).addClass("fadeInLeft");
+        }
+    });
+
+    jQuery('.postwrap3').each(function () {
+        var imagePos = jQuery(this).offset().top;
+
+        var topOfWindow = jQuery(window).scrollTop();
+        if (imagePos < topOfWindow + 400) {
+            jQuery(this).addClass("fadeInRight");
+        }
+    });
+
+
 });
 	
 jQuery(document).ready(function() {
