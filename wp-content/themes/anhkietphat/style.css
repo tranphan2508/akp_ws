@@ -220,7 +220,8 @@ ol.comment-list li {
     width: 1100px !important;
     margin: 6px auto 0;
     position: relative;
-    min-height: 600px;;
+    min-height: 600px;
+    padding-top: 40px;
 
 }
 
@@ -312,7 +313,7 @@ ol.comment-list li {
 
 .toggle a {
     width: 100%;
-    color: #ffffff;
+    color: #ffffff !important;
     background: url(images/mobile_nav_right.png) no-repeat right center #3e3e3e;
     padding: 10px 10px;
     margin-top: 5px;

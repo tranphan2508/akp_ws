@@ -20,39 +20,33 @@
         <!-- logo -->
         <div class="headerright">
             <?php if (!dynamic_sidebar('sidebar-header')): ?>
-
-                <div class="column-1">
-                <?php query_posts('post_type=page&page_id=26&post_status=publish'); ?>
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.jpg" alt=""/>
-                    <?php if ('' !== get_theme_mod('head_number')) { ?>
-                        <span
-                            class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', get_post_meta($post->ID, 'contact_tel', true), 'skt-construction')); ?></span>
-                        <br>
-                    <?php } ?>
-                    <?php if ('' !== get_theme_mod('head_email')) { ?>
-                        <span class="headreemail"><a
-                                href="mailto:<?php echo sanitize_email(get_theme_mod('head_email', get_post_meta($post->ID, 'contact_email', true))); ?>"><?php echo esc_attr(get_theme_mod('head_email', get_post_meta($post->ID, 'contact_email', true))); ?></a></span>
-                    <?php } ?>
-                    <div class="clear"></div>
+                    <div class="column-1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.jpg" alt=""/>
+                        <?php if ('' !== get_theme_mod('head_number')) { ?>
+                            <span
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', '0912-345-678', 'site')); ?></span>
+                            <br>
+                        <?php } ?>
+                        <?php if ('' !== get_theme_mod('head_email')) { ?>
+                            <span class="headreemail"><a
+                                    href="mailto:<?php echo sanitize_email(get_theme_mod('head_email', 'tranphan2508@gmail.com')); ?>"><?php echo esc_attr(get_theme_mod('head_email', 'tranphan2508@gmail.com')); ?></a></span>
+                        <?php } ?>
+                        <div class="clear"></div>
                     </div>
 
                     <div class="column-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-home.jpg" alt=""/>
-                    <?php if ('' !== get_theme_mod('head_address')) { ?>
-                        <span
-                            class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', get_post_meta($post->ID, 'contact_map_address', true), 'skt-construction')); ?></span>
-                        <br>
-                    <?php } ?>
-                    <?php if ('' !== get_theme_mod('head_citycountry')) { ?>
-                        <span
-                            class="headreemail"><?php echo esc_attr(get_theme_mod('head_citycountry', get_post_meta($post->ID, 'contact_map_city', true), 'skt-construction')); ?></span>
-                    <?php } ?>
-                <?php endwhile; ?>
-                <?php else : ?>
-                <?php endif; ?>
-                <div class="clear"></div>
-                </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-home.jpg" alt=""/>
+                        <?php if ('' !== get_theme_mod('head_address')) { ?>
+                            <span
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', '02 Đống Đa,', 'site')); ?></span>
+                            <br>
+                        <?php } ?>
+                        <?php if ('' !== get_theme_mod('head_citycountry')) { ?>
+                            <span
+                                class="headreemail"><?php echo esc_attr(get_theme_mod('head_citycountry', 'Hải Châu, Đà Nẵng', 'site')); ?></span>
+                        <?php } ?>
+                        <div class="clear"></div>
+                    </div>
             <?php endif; ?>
             <div class="column-3">
                 <?php if ('' !== get_theme_mod('fb_link')) { ?>
@@ -70,6 +64,7 @@
             </div>
         </div>
         <!-- headerright -->
+
 
         <div class=toggle><a class="toggleMenu" href="<?php echo esc_url('#'); ?>"><?php _e('Menu', 'menu'); ?></a>
         </div>

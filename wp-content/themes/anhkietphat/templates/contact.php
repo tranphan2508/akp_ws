@@ -7,8 +7,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9 col-xs-12">
-            <h4>Trụ sở công ty</h4>
-            <?php query_posts('post_type=page&page_id=26&post_status=publish'); ?>
+            <div class="header3"><h3>Trụ sở công ty</h3></div>
+
+            <?php query_posts('post_type=page&page_id=88&post_status=publish'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <p><?php echo get_post_meta($post->ID, 'contact_map_address', true) ?> <?php echo get_post_meta($post->ID, 'contact_map_city', true) ?></p>
                 <p>Tel: <?php echo get_post_meta($post->ID, 'contact_tel', true) ?></p>
@@ -23,6 +24,7 @@
             </div>
         </div>
         <div class="col-sm-3 col-xs-12">
+            <div class="header3"> <h3>Liên hệ</h3> </div>
             <div class="blog-post">
                 <?php
                 if (have_posts()) : while (have_posts()) : the_post();
