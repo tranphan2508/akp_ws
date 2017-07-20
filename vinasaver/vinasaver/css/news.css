@@ -1,0 +1,27 @@
+.news .main-news .news-title,
+.news .main-news .news-img
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.news .main-news .news-title a{
+	color: #000;
+}
+
+.news .main-news .news-content {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.news .main-news .news-content .news-img-description {
+	text-align: center;
+}
+
+.news .post-nav {
+	margin-top: 20px;
+}
+.news .source-link,
+.news .more-link{
+	color:#068a99;
+}

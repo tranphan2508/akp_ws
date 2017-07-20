@@ -1,0 +1,111 @@
+.corporate-profile,
+.vinasaver-style{
+	max-width: 700px;
+}
+.corporate-profile .row2,
+.corporate-profile .row3,
+.corporate-profile .row4,
+.corporate-profile .row5,
+.corporate-profile .row6,
+.corporate-profile .row7,
+.corporate-profile .row8,
+.corporate-profile .row9,
+.corporate-profile .row10{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.corporate-profile .row10{
+	border-bottom: 1px solid #ccc;
+}
+.corporate-profile  .row1 {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+.corporate-profile .corporate-profile-left{
+    background-color: #c9c9c9;
+    color: #000;
+    display: table;
+    font-weight: bold;
+}
+.corporate-profile .corporate-profile-left p{
+    display: table-cell;
+    vertical-align: middle;
+}
+.corporate-profile .corporate-profile-right p {
+    margin: 5px;
+}
+.corporate-profile .cotextbox2 {
+    border-bottom: 1px dotted #ccc;
+}
+
+@media (min-width: 768px) {
+	.corporate-profile .corporate-profile-left-row1,
+	.corporate-profile .corporate-profile-left-row2,
+	.corporate-profile .corporate-profile-left-row3,
+	.corporate-profile .corporate-profile-left-row5,
+	.corporate-profile .corporate-profile-left-row7,
+	.corporate-profile .corporate-profile-left-row8,
+	.corporate-profile .corporate-profile-left-row10{
+		height: 30px;
+	}
+	.corporate-profile .corporate-profile-left-row6{
+		height: 60px;
+	}
+	.corporate-profile .corporate-profile-left-row4{
+		height: 180px;
+	}
+}
+
+/*--------------maps---------------*/
+.maps
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.maps .map{
+	width: 300px;
+	height: 300px;
+}
+@media (min-width: 768px) {
+	.maps .map{
+		width: 680px;
+		height: 600px;
+	}
+}
+
+/*--------------saver japan---------------*/
+.saver_japan
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.saver_japan .map{
+	width: 300px;
+	height: 300px;
+}
+.saver_japan a{
+	color: #235279;
+}
+.saver_japan .mt40{
+	margin-top: 40px;
+}
+@media (min-width: 768px) {
+	.saver_japan .map{
+		width: 680px;
+		height: 600px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
