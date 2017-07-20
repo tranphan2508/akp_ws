@@ -1141,3 +1141,7 @@ body.wp-custom-logo .logo h1 {
 #sidebar ul li ul, #sidebar ul li ul li ul, #sidebar ol li ol, #sidebar ol li ol li ol {
     margin-left: 0px;
 }
+.container .header3{
+    border-bottom: 1px dashed #967575;
+    margin-bottom: 20px;
+}
