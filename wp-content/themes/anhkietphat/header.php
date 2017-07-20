@@ -74,6 +74,7 @@
 
     </div>
     <!-- header-inner -->
+    <div class = "divider_header"></div>
 </div>
 <!-- header -->
 

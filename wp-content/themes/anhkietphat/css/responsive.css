@@ -187,7 +187,7 @@
     }
 
     .header .header-inner .nav ul li a {
-        padding: 5px 10px !important;
+        padding: 10px 10px !important;
         display: block;
         color: #777;
         border-right: none;
@@ -254,6 +254,9 @@
     }
     .google-map{
         height: 300px;
+    }
+    .divider_header {
+        margin-top: 0;
     }
 }
 
