@@ -1,9 +1,4 @@
 <?php
-/**
- * The Template for displaying all single posts.
- *
- * @package SKT Construction
- */
 
 get_header(); ?>
 

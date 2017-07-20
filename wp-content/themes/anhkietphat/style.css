@@ -8,15 +8,16 @@
 * Textdomain: anhkietphat
 * Languages Folder: /languages
 */
-html{
+html {
     margin-top: 0 !important;
 }
+
 body {
     background-color: #fff;
     margin: 0;
     padding: 0;
     color: #5d5c5c;
-    font: normal 13px/20px 'Arimo', sans-serif;
+    font: normal 12px/20px 'Arimo', sans-serif;
     position: relative;
 }
 
@@ -45,7 +46,7 @@ p {
 
 a {
     text-decoration: none;
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
 }
 
 a:hover {
@@ -177,7 +178,7 @@ ol.comment-list li {
 
 .header .header-inner .logo {
     z-index: 999;
-    padding: 25px 0 0;
+    padding: 20px 0 0;
     float: left;
 }
 
@@ -188,31 +189,46 @@ ol.comment-list li {
     width: 1100px;
     display: table;
 }
-.header .header-inner a {}
+
+.header .header-inner a, .header .header-inner a:hover {
+    text-decoration: none;
+}
+
 .header .header-inner .logo h1 {
-    font-weight: 600;
+    font-weight: 500;
     margin: 0px;
-    line-height: 36px;
-    font-family: 'Roboto', cursive;
-    color: rgb(5,107,179);
-    text-transform: uppercase;
+    line-height: 56px;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #096cb0;
+    font-size: 36px;
+    /*text-transform: uppercase;*/
+}
+
+.header .logo span.uppercase {
+    font-size: 57px;
+    font-weight: 500;
 }
 
 .header span.tagline {
-    color: #333;
+    color: #a7740a;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
 }
 
 .container {
-    width: 1100px;
-    margin: 0 auto;
+    width: 1100px !important;
+    margin: 6px auto 0;
     position: relative;
+    min-height: 600px;;
+
 }
 
 .headerright {
     float: right;
     width: 50%;
     font-family: 'Roboto', cursive;
-    padding: 32px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 .headerright .column-1, .headerright .column-2, .headerright .column-3 {
@@ -252,16 +268,18 @@ ol.comment-list li {
 }
 
 .headerright .column-3 .fa:hover {
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
 }
 
 .headerright img {
     float: left;
-    margin: 5px 8px 0 0;
+    margin: 1px 8px 0 0;
+    height: 17px;
+    width: auto;
 }
 
 .headerright .headerphone {
-    font: bold 16px 'Roboto';
+    font: bold 14px 'Roboto';
 }
 
 .headerright .headeremail {
@@ -326,8 +344,9 @@ ol.comment-list li {
     position: relative;
     z-index: 999;
     text-transform: uppercase;
-    border-bottom: 4px solid #ccc;
-    top: 30px;
+    /*border-bottom: 4px solid #ccc;*/
+    top: 15px;
+    float: right;
 }
 
 .header .header-inner .nav ul {
@@ -340,19 +359,16 @@ ol.comment-list li {
     margin: 0;
     position: relative;
     text-align: center;
-    width: 17%;
-}
-.header .header-inner .nav ul li:last-child {
-    width: 13%;
 }
 
 .header .header-inner .nav ul li a {
-    padding: 15px 30px;
+    padding: 10px 25px;
     display: block;
     /*color: #fff;*/
     /*border-right: 1px solid #363636;*/
     color: #777;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .header .header-inner .nav ul li:last-child a {
@@ -377,17 +393,19 @@ ol.comment-list li {
     border-right: none;
 }
 
-.header .header-inner .nav ul li a:hover,  {
-    color: rgb(5,107,179);
+.header .header-inner .nav ul li a:hover, {
+    color: rgb(5, 107, 179);
 }
+
 .header .header-inner .nav ul li.current_page_item a {
-    border-bottom: 3px solid rgb(5,107,179);
+    border-bottom: 2px solid #a7740a;
 }
 
 .header .header-inner .nav ul li a:hover, .header .header-inner .nav ul li.current_page_item a {
-    border-right:rgb(5,107,179);
+    border-right: rgb(5, 107, 179);
     /*background-color: rgb(5,107,179);*/
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
+    text-decoration: none;
 }
 
 .header .header-inner .nav ul li ul {
@@ -420,7 +438,7 @@ ol.comment-list li {
 }
 
 .toggle a {
-    display: none;
+    /* display: none;*/
 }
 
 /* = header top sign in  css
@@ -459,7 +477,7 @@ h2.section-title {
 }
 
 #wrapfirst h1 {
-    border-left: 8px solid rgb(5,107,179);
+    border-left: 8px solid rgb(5, 107, 179);
     padding: 5px 0 5px 20px;
     color: #272727;
     font-weight: 600;
@@ -551,7 +569,7 @@ a.more-button {
 }
 
 a.more-button span {
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
     font-weight: 600;
 }
 
@@ -589,7 +607,7 @@ a.more-button:hover {
 }
 
 .social-icons a:hover {
-    background-color: rgb(5,107,179);
+    background-color: rgb(5, 107, 179);
 }
 
 /* = Page lay out css
@@ -673,7 +691,7 @@ a.more-button:hover {
     background-color: transparent;
     color: #5d5c5c;
     display: inline-block;
-    border: 2px solid rgb(5,107,179);
+    border: 2px solid rgb(5, 107, 179);
     padding: 5px 10px;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -681,7 +699,7 @@ a.more-button:hover {
 }
 
 .MoreLink:hover {
-    background-color: rgb(5,107,179);
+    background-color: rgb(5, 107, 179);
     color: #fff;
 }
 
@@ -704,7 +722,7 @@ aside.widget ul {
 }
 
 h3.widget-title {
-    background-color: rgb(5,107,179);
+    background-color: rgb(5, 107, 179);
     padding: 12px 15px;
     margin-bottom: 1px;
     color: #000;
@@ -768,7 +786,7 @@ h3.widget-title {
 
 .cols-3 h5 span {
     font-weight: 300;
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
 }
 
 .cols-3 ul {
@@ -794,7 +812,7 @@ h3.widget-title {
 }
 
 .cols-4 span {
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
 }
 
 .cols-4 p {
@@ -995,7 +1013,7 @@ h1.product_title, p.price {
 }
 
 .wpcf7 textarea {
-    width: 60%;
+    /*width: 60%;*/
     border: 1px solid #cccccc;
     box-shadow: inset 1px 1px 2px #ccc;
     height: 150px;
@@ -1007,7 +1025,7 @@ h1.product_title, p.price {
 }
 
 .wpcf7 input[type="submit"] {
-    background-color: rgb(5,107,179);
+    background-color: rgb(5, 107, 179);
     width: auto;
     border: none;
     cursor: pointer;
@@ -1053,7 +1071,7 @@ nav#nav-below {
 
 .footertitle span {
     font-weight: 300;
-    color: rgb(5,107,179);
+    color: rgb(5, 107, 179);
 }
 
 body.wp-custom-logo .logo h1 {
