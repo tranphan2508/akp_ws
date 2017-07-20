@@ -258,6 +258,9 @@
     .divider_header {
         margin-top: 0;
     }
+    .footer-right{
+        display: none;
+    }
 }
 
 /* Mobile Landscape View */

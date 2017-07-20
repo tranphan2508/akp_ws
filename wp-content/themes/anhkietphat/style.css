@@ -753,9 +753,9 @@ h3.widget-title {
 /* = Footer css
 -------------------------------------------------------------- */
 
-#footer-wrapper {
-    background-color: #121212;
-    color: #8e8d8d;
+#footer {
+    background-color: #e3e3e3;
+    color: rgb(89,89,89);
 }
 
 #footer-wrapper .container {
@@ -1153,4 +1153,46 @@ body.wp-custom-logo .logo h1 {
     border-bottom-style: solid;
     border-color: #e7e7e7;
     margin-top: 13px;
+}
+.container-fluid{
+    padding: 0px !important;
+}
+
+#myCarousel{
+    display: block!important;
+    margin-bottom: 10px!important;
+}
+.carousel-indicators {
+    bottom: -35px !important;
+    right: 3%!important;
+    width: auto!important;
+    left: auto!important;
+}
+.carousel-indicators li {
+    background-color: #979c95 !important;
+    border: 1px solid #979c95 !important;
+}
+.carousel-indicators li.active {
+    width: 12px!important;
+    height: 12px!important;
+    margin: 0!important;
+    background-color: #fff !important;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    right: 15%!important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: 15%!important;
+}
+.footer-c{
+    min-height:auto!important;
+}
+#footer img{
+    max-width: 100%;
+    height: auto;
+    padding: 0!important;
+    max-height: 126px;
+}
+#footer p{
+    margin: 0;
 }
