@@ -35,8 +35,8 @@
                 ?>
             </div>
             <!-- blog-post -->
-            <div class="clear"></div>
         </div>
+        <div class="clear"></div>
         <!-- site-aligner -->
     </div>
 </div><!-- content -->

@@ -393,3 +393,18 @@
         padding: 0 20px;
     }
 }
+
+.col-md-5ths,
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20% !important;
+        float: left;
+    }
+}

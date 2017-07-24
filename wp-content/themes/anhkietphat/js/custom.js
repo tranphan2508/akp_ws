@@ -9,8 +9,6 @@
     });
 		}
 });*/
-	
-
 // NAVIGATION CALLBACK
 jQuery(document).ready(function() {
 	jQuery(".nav li a").each(function() {
@@ -64,3 +62,4 @@ jQuery(document).ready(function() {
 			jQuery('.topsocial').toggle();
 		});	
 });
+

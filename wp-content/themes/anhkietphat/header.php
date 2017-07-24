@@ -12,7 +12,7 @@
 <div class="header">
     <div class="header-inner">
         <div class="logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
+            <a href="<?php echo esc_url(home_url('/home')); ?>">
                 <h1><span class="uppercase">A</span>nh Kiệt Phát</h1>
                 <span class="tagline">Nhà thầu của mọi công trình</span>
             </a>
@@ -29,7 +29,7 @@
                         <?php } ?>
                         <?php if ('' !== get_theme_mod('head_email')) { ?>
                             <span class="headreemail"><a
-                                    href="mailto:<?php echo sanitize_email(get_theme_mod('head_email', 'tranphan2508@gmail.com')); ?>"><?php echo esc_attr(get_theme_mod('head_email', 'tranphan2508@gmail.com')); ?></a></span>
+                                    href="mailto:<?php echo sanitize_email(get_theme_mod('head_email', 'anhkietphat@gmail.com')); ?>"><?php echo esc_attr(get_theme_mod('head_email', 'anhkietphat@gmail.com')); ?></a></span>
                         <?php } ?>
                         <div class="clear"></div>
                     </div>

@@ -3,20 +3,27 @@
 get_header(); ?>
 
     <div class="container">
-        <div class="page_content">
-            <section class="site-main">
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part( 'content', 'single' ); ?>
-                    <?php
-                    // If comments are open or we have at least one comment, load up the comment template
-                    if ( comments_open() || '0' != get_comments_number() )
-                        comments_template();
-                    ?>
-                <?php endwhile; // end of the loop. ?>
-            </section>
-           <!-- --><?php /*get_sidebar();*/?>
+            <div class="row">
+                <div class="col-sm-9 col-xs-12">
+                    <?php while (have_posts()) : the_post(); ?>
+                        <div class="header3"><h3><?php the_title() ?></h3></div>
+                        <div class="text-center">
+                            <img class="img-responsive center-block" width="auto" height="auto" style="max-height: 400px"
+                                                                     src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" alt="<?php the_title() ?>"/>
+                        </div>
+                        <?php the_content(); ?>
+                    <?php endwhile; // end of the loop. ?>
+                    <?php /*get_sidebar();*/ ?>
+                </div>
+
+                <div class="col-sm-3 col-xs-12">
+                    <div class="header3"><h3>Dự án</h3></div>
+
+                </div>
+            </div>
+
 
             <div class="clear"></div>
-        </div><!-- page_content -->
+        <!-- page_content -->
     </div><!-- container -->
 <?php get_footer(); ?>

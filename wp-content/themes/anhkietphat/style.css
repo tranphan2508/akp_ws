@@ -19,6 +19,7 @@ body {
     color: #5d5c5c;
     font: normal 12px/20px 'Arimo', sans-serif;
     position: relative;
+    /*word-break: break-all;*/
 }
 
 * {
@@ -140,13 +141,14 @@ img.alignright, .alignright {
 }
 
 .pagination {
-    display: table;
+    display: block !important;
     clear: both;
 }
 
 .pagination ul {
     list-style: none;
     margin: 20px 0;
+    display: inline-block;
 }
 
 .pagination ul li {
@@ -221,7 +223,7 @@ ol.comment-list li {
     margin: 6px auto 0;
     position: relative;
     min-height: 600px;
-    padding-top: 20px;
+    padding-top: 10px;
 
 }
 
@@ -1184,6 +1186,9 @@ body.wp-custom-logo .logo h1 {
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
     left: 15%!important;
 }
+#footer{
+    margin-top: 20px!important;
+}
 .footer-c{
     min-height:auto!important;
 }
@@ -1196,3 +1201,11 @@ body.wp-custom-logo .logo h1 {
 #footer p{
     margin: 0;
 }
+
+.copy-right{
+    background-color: #ccc;
+    padding: 0 0 5px;
+    color: #333;
+    line-height: 30px;
+}
+

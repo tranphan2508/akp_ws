@@ -1,0 +1,11 @@
+.new-image{
+    max-height:224px;
+    width: auto;
+    max-width: 100%;
+}
+
+.content-news{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
