@@ -50,14 +50,18 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="header3"><h3>Dự án gần đây</h3></div>
+                <div class="header3">
+                    <h3>Dự án gần đây</h3>
+                </div>
                 <?php
                 query_posts('post_type=projects&post_status=publish&posts_per_page=5&paged=' . get_query_var('paged'));?>
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="col-xs-12 col-sm-6 col-md-5ths custom-project-list">
                         <div class="pic">
-                            <a href="<?php the_permalink(); ?>"><img class="img-responsive center-block" width="100%" height="auto"
-                                                                     src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" alt="<?php the_title() ?>"/></a>
+                            <a href="<?php the_permalink(); ?>"><img class="img-responsive center-block" width="100%"
+                                                                     height="auto"
+                                                                     src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>"
+                                                                     alt="<?php the_title() ?>"/></a>
                         </div>
                         <div class="title">
                             <h5><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>
@@ -75,13 +79,48 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
                 <div class="header3"><h3>Tin tức</h3></div>
-                <div>Coming soon</div>
-            </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="container-fluid slide-outer">
+                            <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <?php
+                                    query_posts('post_type=news&post_status=publish&posts_per_page=20&paged=' . get_query_var('paged'));?>
+                                    <?php if (have_posts()) : $count = 0;
+                                        while (have_posts()) : $count++;
+                                            the_post(); ?>
+                                            <div <?php if ($count == 1) { ?>class="item active" <?php
+                                            }
+                                            else {
+                                            ?>class="item"<?php } ?>>
+                                                <div class="itembody col-sm-3">
+                                                    <h3><a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h3>
+
+                                                    <p><?php the_content('Read on...'); ?></p>
+                                                </div>
+
+                                                <a class="right col-sm-9" href="<?php the_permalink(); ?>"><img
+                                                        class="new-image center-block" width="100%"
+                                                        height="auto"
+                                                        src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>"
+                                                        alt="<?php the_title() ?>"/></a>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php else : ?>
+                                    <?php endif; ?>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
         </div>
+    </div>
 
 
-        <div class="clear"></div>
+    <div class="clear"></div>
     </div><!-- content -->
 <?php get_footer(); ?>
