@@ -216,7 +216,7 @@ if (!function_exists('create_projects_post_type')) {
                 'title', 'editor', 'comments', 'author', 'excerpt', 'thumbnail',
                 'custom-fields'
             ),
-            'rewrite' => array('slug' => 'projects', 'with_front' => false),
+            'rewrite' => array('slug' => 'du-an', 'with_front' => false),
             'taxonomies' => array('post_tag', 'category'),
             'can_export' => true,
             //'register_meta_box_cb'  =>  'call_to_function_do_something',
@@ -263,7 +263,7 @@ if (!function_exists('create_news_post_type')) {
                 'title', 'editor', 'comments', 'author', 'excerpt', 'thumbnail',
                 'custom-fields'
             ),
-            'rewrite' => array('slug' => 'news', 'with_front' => false),
+            'rewrite' => array('slug' => 'tin-tuc', 'with_front' => false),
             'taxonomies' => array('post_tag', 'category'),
             'can_export' => true,
             //'register_meta_box_cb'  =>  'call_to_function_do_something',
@@ -310,7 +310,7 @@ if (!function_exists('create_careers_post_type')) {
                 'title', 'editor', 'comments', 'author', 'excerpt', 'thumbnail',
                 'custom-fields'
             ),
-            'rewrite' => array('slug' => 'careers', 'with_front' => false),
+            'rewrite' => array('slug' => 'tuyen-dung', 'with_front' => false),
             'taxonomies' => array('post_tag', 'category'),
             'can_export' => true,
             //'register_meta_box_cb'  =>  'call_to_function_do_something',
