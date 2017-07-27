@@ -100,7 +100,8 @@
                                                     <h3><a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h3>
 
                                                     <p><?php the_content('Read on...'); ?></p>
-            </div>
+                                                </div>
+
                                                 <a class="right col-sm-9" href="<?php the_permalink(); ?>"><img
                                                         class="new-image center-block" width="100%"
                                                         height="auto"
@@ -111,6 +112,7 @@
                                     <?php else : ?>
                                     <?php endif; ?>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -120,6 +122,6 @@
     </div>
 
 
-        <div class="clear"></div>
+    <div class="clear"></div>
     </div><!-- content -->
 <?php get_footer(); ?>
