@@ -99,14 +99,14 @@ if (!function_exists('site_name_header')) {
 /*
  * Active menu when display detail content of post
  */
-function my_special_nav_class($classes, $item)
+/*function my_special_nav_class($classes, $item)
 {
     // Getting the current post details
     global $post;
 
     // Getting the post type of the current post
     $current_post_type = get_post_type_object(get_post_type($post->ID));
-    $current_post_type_slug = $current_post_type->rewrite[slug];
+    if($current_post_type) $current_post_type_slug = $current_post_type->rewrite[slug];
 
     // Getting the URL of the menu item
     $menu_slug = strtolower(trim($item->url));
@@ -120,7 +120,7 @@ function my_special_nav_class($classes, $item)
     return $classes;
 }
 
-add_filter('nav_menu_css_class', 'my_special_nav_class', 10, 2);
+add_filter('nav_menu_css_class', 'my_special_nav_class', 10, 2);*/
 
 /*
  * load theme css
@@ -324,5 +324,20 @@ if (!function_exists('create_careers_post_type')) {
     add_action('init', 'create_careers_post_type');
 }
 
+/*
+ * Add theme logo
+ */
+if(!function_exists("theme_custom_logo_setup")){
+    function theme_custom_logo_setup(){
+        add_theme_support( 'custom-logo', array(
+            'height'      => 100,
+            'width'       => 140,
+            'flex-height' => false,
+            'flex-width'  => false,
+            'header-text' => array( 'site-title', 'site-description' ),
+        ) );
+    }
+    add_action('after_setup_theme', 'theme_custom_logo_setup');
+}
 
 

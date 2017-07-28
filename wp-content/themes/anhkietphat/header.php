@@ -10,40 +10,26 @@
 </head>
 <body <?php body_class(''); ?> <?php if (!is_home() || !is_front_page()) { ?>id="innerPage"<?php } ?>>
 <div class="header">
+    <div class="nav-top-panel ">
     <div class="header-inner">
-        <div class="logo">
-            <a href="<?php echo esc_url(home_url('/home')); ?>">
-                <h1><span class="uppercase">A</span>nh Kiệt Phát</h1>
-                <span class="tagline">Nhà thầu của mọi công trình</span>
-            </a>
-        </div>
-        <!-- logo -->
-        <div class="headerright">
+            <div class="nav-top-panel-content">
             <?php if (!dynamic_sidebar('sidebar-header')): ?>
                     <div class="column-1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.jpg" alt=""/>
-                        <?php if ('' !== get_theme_mod('head_number')) { ?>
+                        <span class="glyphicon glyphicon-map-marker icon-primary"></span>
+                        <?php if ('' !== get_theme_mod('head_address')) { ?>
                             <span
-                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', '0912-345-678', 'site')); ?></span>
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', '02 Đống Đa, Hải Châu, Đà Nẵng', 'site')); ?></span>
                             <br>
-                        <?php } ?>
-                        <?php if ('' !== get_theme_mod('head_email')) { ?>
-                            <span class="headreemail"><a
-                                    href="mailto:<?php echo sanitize_email(get_theme_mod('head_email', 'anhkietphat@gmail.com')); ?>"><?php echo esc_attr(get_theme_mod('head_email', 'anhkietphat@gmail.com')); ?></a></span>
                         <?php } ?>
                         <div class="clear"></div>
                     </div>
 
                     <div class="column-2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-home.jpg" alt=""/>
-                        <?php if ('' !== get_theme_mod('head_address')) { ?>
+                        <span class="glyphicon glyphicon-earphone icon-primary"></span>
+                        <?php if ('' !== get_theme_mod('head_number')) { ?>
                             <span
-                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', '02 Đống Đa,', 'site')); ?></span>
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', '0912-345-678', 'site')); ?></span>
                             <br>
-                        <?php } ?>
-                        <?php if ('' !== get_theme_mod('head_citycountry')) { ?>
-                            <span
-                                class="headreemail"><?php echo esc_attr(get_theme_mod('head_citycountry', 'Hải Châu, Đà Nẵng', 'site')); ?></span>
                         <?php } ?>
                         <div class="clear"></div>
                     </div>
@@ -63,8 +49,19 @@
                 <?php } ?>
             </div>
         </div>
-        <!-- headerright -->
+        </div>
 
+    </div>
+    <div class="header-inner">
+
+        <div class="logo">
+            <a href="<?php echo esc_url(home_url('/home')); ?>">
+                <img src="<?php echo esc_url(wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]) ?>" alt="logo">
+                <!--<h1><span class="uppercase">A</span>nh Kiệt Phát</h1>
+                <span class="tagline">Nhà thầu của mọi công trình</span>-->
+            </a>
+        </div>
+        <!-- logo -->
 
         <div class=toggle><a class="toggleMenu" href="<?php echo esc_url('#'); ?>"><?php _e('Menu', 'menu'); ?></a>
         </div>

@@ -180,7 +180,7 @@ ol.comment-list li {
 
 .header .header-inner .logo {
     z-index: 999;
-    padding: 20px 0 0;
+    padding: 6px 0 0;
     float: left;
 }
 
@@ -234,64 +234,68 @@ ol.comment-list li {
     padding: 20px 0 0 0;
 }
 
-.headerright .column-1, .headerright .column-2, .headerright .column-3 {
+.nav-top-panel .column-1, .nav-top-panel .column-2, .nav-top-panel .column-3 {
     float: left;
     width: 34%;
     margin-right: 20px;
+    padding-top: 5px;
 }
 
-.headerright .column-3 {
+.nav-top-panel .column-3 {
     width: 22% !important;
     margin-right: 0;
-    padding-top: 10px;
+    padding-top: 5px;
+    float:right;
+    text-align: right;
 }
 
-.headerright .column-3 a {
+.nav-top-panel .column-3 a {
     width: 26px;
     height: 26px;
     display: inline-block;
     margin-left: 5px;
+
 }
 
-.headerright .column-3 .fb {
+.nav-top-panel .column-3 .fb {
     background: url(images/ic-fb.png) no-repeat left top;
     width: 26px;
 }
 
-.headerright .column-3 .gp {
+.nav-top-panel .column-3 .gp {
     background: url(images/ic-ggp.png) no-repeat left top;
 }
 
-.headerright .column-3 .yt {
+.nav-top-panel .column-3 .yt {
     background: url(images/ic-yt.png) no-repeat left top;
 }
 
-.headerright .column-3 .in {
+.nav-top-panel .column-3 .in {
     background: url(images/icon-in.jpg) no-repeat left top;
 }
 
-.headerright .column-3 .fa:hover {
+.nav-top-panel .column-3 .fa:hover {
     color: rgb(5, 107, 179);
 }
 
-.headerright img {
+.nav-top-panel img {
     float: left;
     margin: 1px 8px 0 0;
     height: 17px;
     width: auto;
 }
 
-.headerright .headerphone {
-    font: bold 14px 'Roboto';
+.nav-top-panel .headerphone {
+    font:  16px 'Roboto';
 }
 
-.headerright .headeremail {
+.nav-top-panel .headeremail {
     font: normal 13px 'Arimo';
     color: #828181;
 }
 
-.headerright a {
-    color: #1d1d1d
+.nav-top-panel a {
+    color: #fff;
 }
 
 /* = innerbanner css
@@ -339,7 +343,8 @@ ol.comment-list li {
 
 #innerPage .header {
     position: relative;
-    background-color: #ffffff;
+    background-color: #4c4c4c;
+    color: #fff
 }
 
 .header .header-inner .nav {
@@ -348,8 +353,8 @@ ol.comment-list li {
     z-index: 999;
     text-transform: uppercase;
     /*border-bottom: 4px solid #ccc;*/
-    top: 15px;
-    float: right;
+    top: 30px;
+    text-align: right;
 }
 
 .header .header-inner .nav ul {
@@ -365,13 +370,13 @@ ol.comment-list li {
 }
 
 .header .header-inner .nav ul li a {
-    padding: 10px 25px;
+    padding: 4px 25px;
     display: block;
-    /*color: #fff;*/
+    color: #fff;
     /*border-right: 1px solid #363636;*/
-    color: #777;
     font-weight: bold;
     text-decoration: none;
+    margin-bottom: 6px;
 }
 
 .header .header-inner .nav ul li:last-child a {
@@ -401,14 +406,15 @@ ol.comment-list li {
 }
 
 .header .header-inner .nav ul li.current_page_item a {
-    border-bottom: 2px solid #a7740a;
+    /*border-bottom: 2px solid #ffff00;*/
 }
 
 .header .header-inner .nav ul li a:hover, .header .header-inner .nav ul li.current_page_item a {
     border-right: rgb(5, 107, 179);
     /*background-color: rgb(5,107,179);*/
-    color: rgb(5, 107, 179);
+    color: #00ff01;
     text-decoration: none;
+    font-family:"Montserrat",Helvetica,sans-serif;
 }
 
 .header .header-inner .nav ul li ul {
@@ -1154,7 +1160,7 @@ body.wp-custom-logo .logo h1 {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-color: #e7e7e7;
-    margin-top: 13px;
+    margin-top: 6px;
 }
 .container-fluid{
     padding: 0px !important;
@@ -1209,3 +1215,28 @@ body.wp-custom-logo .logo h1 {
     line-height: 30px;
 }
 
+.logo img{
+    width: 110px;
+    /*height: auto;*/
+}
+
+.icon-primary{
+    color: #00ff01;
+}
+
+.nav-top-panel {
+    position: relative;
+    z-index: 10;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #272727;
+}

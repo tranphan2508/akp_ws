@@ -1,4 +1,7 @@
 .carousel-inner .itembody{
     display: inline-block;
-    float:left;
+    /*float:left;*/
+}
+#myCarousel2 .carousel-inner{
+    /*height: 265px;*/
 }

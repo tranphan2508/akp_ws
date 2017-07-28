@@ -47,14 +47,10 @@
         margin-top: 0;
     }
 
-    .headerright, .headerright .column-1, .headerright .column-2, .headerright .column-3 {
+    .nav-top-panel {
         /*float:none; width:auto !important; margin-right:0;*/
         display: none;
-    }
 
-    .headerright .column-1, .headerright .column-2, .headerright .column-3 {
-        width: 70% !important;
-        margin: 0 auto 10px auto;
     }
 
     #wrapfirst img {
@@ -406,5 +402,10 @@
     .col-md-5ths {
         width: 20% !important;
         float: left;
+    }
+}
+@media screen and (max-width: 879px) {
+    .header .header-inner .nav ul li a {
+        padding: 4px 14px;
     }
 }
