@@ -106,7 +106,7 @@ if (!function_exists('site_name_header')) {
 
     // Getting the post type of the current post
     $current_post_type = get_post_type_object(get_post_type($post->ID));
-    if($current_post_type) $current_post_type_slug = $current_post_type->rewrite[slug];
+    $current_post_type_slug = $current_post_type->rewrite[slug];
 
     // Getting the URL of the menu item
     $menu_slug = strtolower(trim($item->url));
