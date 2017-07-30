@@ -236,7 +236,7 @@ ol.comment-list li {
 
 .nav-top-panel .column-1, .nav-top-panel .column-2, .nav-top-panel .column-3 {
     float: left;
-    width: 34%;
+    /*width: 34%;*/
     margin-right: 20px;
     padding-top: 5px;
 }
@@ -355,6 +355,8 @@ ol.comment-list li {
     /*border-bottom: 4px solid #ccc;*/
     top: 30px;
     text-align: right;
+    float:right;
+    width: 80%;
 }
 
 .header .header-inner .nav ul {
@@ -1216,7 +1218,7 @@ body.wp-custom-logo .logo h1 {
 }
 
 .logo img{
-    width: 110px;
+    width: 100px;
     /*height: auto;*/
 }
 

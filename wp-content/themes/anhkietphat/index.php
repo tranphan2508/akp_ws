@@ -80,11 +80,12 @@
         </div>
 
         <div class="row">
+            <div class="col-xs-12">
                 <div class="header3"><h3>Tin tức</h3></div>
                 <div class="row">
                     <div class="col-sm-9">
                         <div class="container-fluid slide-outer">
-                    <div id="myCarousel2" class="carousel slide col-sm-8" data-ride="carousel">
+                            <div id="myCarousel2" class="carousel slide col-sm-8" data-ride="carousel">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <?php
@@ -96,13 +97,14 @@
                                             }
                                             else {
                                             ?>class="item"<?php } ?>>
-                                        <div class="itembody col-sm-4">
-                                                    <h3><a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h3>
+                                                <div class="itembody col-sm-4">
+                                                    <h3><a href="<?php the_permalink(); ?>"> <?php the_title() ?></a>
+                                                    </h3>
 
                                                     <p><?php the_content('Read on...'); ?></p>
                                                 </div>
 
-                                        <a class="right col-sm-8" href="<?php the_permalink(); ?>"><img
+                                                <a class="right col-sm-8" href="<?php the_permalink(); ?>"><img
                                                         class="new-image center-block" width="100%"
                                                         height="auto"
                                                         src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>"
@@ -112,22 +114,24 @@
                                     <?php else : ?>
                                     <?php endif; ?>
                                 </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        query_posts('post_type=news&post_status=publish&posts_per_page=20&paged=' . get_query_var('paged'));?>
-                        <?php if (have_posts()) : $count = 0;
-                            while (have_posts()) : $count++;
-                                the_post(); ?>
-                                <div><a class="right col-sm-5" href="<?php the_permalink(); ?>"><?php the_title() ?></a></div>
-                            <?php endwhile; ?>
-                        <?php else : ?>
-                        <?php endif; ?>
+                            </div>
+                            <div class="col-sm-4">
+                                <?php
+                                query_posts('post_type=news&post_status=publish&posts_per_page=20&paged=' . get_query_var('paged'));?>
+                                <?php if (have_posts()) : $count = 0;
+                                    while (have_posts()) : $count++;
+                                        the_post(); ?>
+                                        <div><a class="right col-sm-5"
+                                                href="<?php the_permalink(); ?>"><?php the_title() ?></a></div>
+                                    <?php endwhile; ?>
+                                <?php else : ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3"></div>
                 </div>
+            </div>
         </div>
     </div>
 

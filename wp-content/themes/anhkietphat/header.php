@@ -18,7 +18,7 @@
                         <span class="glyphicon glyphicon-map-marker icon-primary"></span>
                         <?php if ('' !== get_theme_mod('head_address')) { ?>
                             <span
-                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', '02 Đống Đa, Hải Châu, Đà Nẵng', 'site')); ?></span>
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_address', 'K192/8 Tô Hiệu, Phường Hoà Minh, Quận Liên Chiểu, Đà Nẵng', 'site')); ?></span>
                             <br>
                         <?php } ?>
                         <div class="clear"></div>
@@ -28,7 +28,7 @@
                         <span class="glyphicon glyphicon-earphone icon-primary"></span>
                         <?php if ('' !== get_theme_mod('head_number')) { ?>
                             <span
-                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', '0912-345-678', 'site')); ?></span>
+                                class="headerphone"><?php echo esc_attr(get_theme_mod('head_number', '0935-901-428', 'site')); ?></span>
                             <br>
                         <?php } ?>
                         <div class="clear"></div>
@@ -55,7 +55,7 @@
     <div class="header-inner">
 
         <div class="logo">
-            <a href="<?php echo esc_url(home_url('/home')); ?>">
+            <a href="<?php echo esc_url(home_url('/trang-chu')); ?>">
                 <img src="<?php echo esc_url(wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]) ?>" alt="logo">
                 <!--<h1><span class="uppercase">A</span>nh Kiệt Phát</h1>
                 <span class="tagline">Nhà thầu của mọi công trình</span>-->

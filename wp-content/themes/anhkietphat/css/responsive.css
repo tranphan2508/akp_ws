@@ -404,8 +404,8 @@
         float: left;
     }
 }
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 976px) {
     .header .header-inner .nav ul li a {
-        padding: 4px 14px;
+        padding: 4px 10px;
     }
 }
