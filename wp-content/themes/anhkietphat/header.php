@@ -11,7 +11,7 @@
 <body <?php body_class(''); ?> <?php if (!is_home() || !is_front_page()) { ?>id="innerPage"<?php } ?>>
 <div class="header">
     <div class="nav-top-panel ">
-    <div class="header-inner">
+    <div class="header-inner ">
             <div class="nav-top-panel-content">
             <?php if (!dynamic_sidebar('sidebar-header')): ?>
                     <div class="column-1">

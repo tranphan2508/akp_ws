@@ -242,7 +242,7 @@ ol.comment-list li {
 }
 
 .nav-top-panel .column-3 {
-    width: 22% !important;
+    /*width: 22% !important;*/
     margin-right: 0;
     padding-top: 5px;
     float:right;
@@ -381,6 +381,10 @@ ol.comment-list li {
     margin-bottom: 6px;
 }
 
+.header .header-inner .nav ul li:last-child a{
+    padding-right: 0;
+}
+
 .header .header-inner .nav ul li:last-child a {
     border-right: transparent;
 }
@@ -391,6 +395,9 @@ ol.comment-list li {
     float: none;
     top: -1px;
 }
+/*.container{
+    padding: 0!important;
+}*/
 
 .header .header-inner .nav ul li ul li a {
     display: block;

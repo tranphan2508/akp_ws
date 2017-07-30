@@ -50,7 +50,6 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
                 <div class="header3">
                     <h3>Dự án gần đây</h3>
                 </div>
@@ -76,7 +75,6 @@
 
                 <div class="clear"></div>
 
-            </div>
         </div>
 
         <div class="row">
